@@ -19,11 +19,7 @@
 
 
 function print(value) {
-  // YOUR CODE BELOW HERE //
-  
-
-  
-  // YOUR CODE ABOVE HERE //
+  console.log(value);
 }
 
 

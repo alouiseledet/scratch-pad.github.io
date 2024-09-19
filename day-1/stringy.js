@@ -17,32 +17,23 @@
 
 
 function length(string) {
-    // YOUR CODE BELOW HERE //
-
-   
-    
-    // YOUR CODE ABOVE HERE //
+    return string.length;
 }
 
 /**
  * Given an input String, return a new String forced to lowercase.
  */
 function toLowerCase(string) {
-    // YOUR CODE BELOW HERE //
-   
-
-    // YOUR CODE ABOVE HERE //
+    var lowerCase = string.toLowerCase();
+    return lowerCase;
 }
 
 /**
  * Given an input String, return a new String forced to uppercase.
  */
 function toUpperCase(string) {
-    // YOUR CODE BELOW HERE //
-
-
-
-    // YOUR CODE ABOVE HERE //
+    var upperCase = string.toUpperCase();
+    return upperCase;
 }
 
 /**
@@ -59,11 +50,8 @@ function toUpperCase(string) {
  *      See: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Using_global_and_ignore_with_replace()
  */
 function toDashCase(string) {
-    // YOUR CODE BELOW HERE //
-
-
-
-    // YOUR CODE ABOVE HERE //
+    var dashCase = string.toDashCase;
+    return dashCase;
 }
 
 /**
@@ -79,11 +67,11 @@ function toDashCase(string) {
  *      ensure uppercase and lowercase can be compared equally?
  */
 function beginsWith(string, char) {
-    // YOUR CODE BELOW HERE //
-
-    
-
-    // YOUR CODE ABOVE HERE //
+    if (string.toLowerCase.beginsWith === char.toLowerCase) {
+        return true;
+    } else {
+         return false;
+    }
 }
 
 /**
@@ -99,11 +87,11 @@ function beginsWith(string, char) {
  *      ensure uppercase and lowercase can be compared equally?
  */
 function endsWith(string, char) {
-    // YOUR CODE BELOW HERE //
-
-
-
-    // YOUR CODE ABOVE HERE //
+    if (string.toLowerCase.endsWith === char.toLowerCase) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -112,11 +100,7 @@ function endsWith(string, char) {
  * TIP: What's the operator to concatenate two Strings?
  */
 function concat(stringOne, stringTwo) {
-    // YOUR CODE BELOW HERE //
-
-
-
-    // YOUR CODE ABOVE HERE //
+    return stringOne += stringTwo;
 }
 
 /**
@@ -130,11 +114,9 @@ function concat(stringOne, stringTwo) {
  *      in an Array called args.
  */
 function join(stringOne, stringTwo) {
-    // YOUR CODE BELOW HERE //
+    str.concat(stringOne, stringTwo);
     var args = Array.from(arguments);
-
-
-    // YOUR CODE ABOVE HERE //
+    return args;
 }
 
 /**
@@ -147,11 +129,8 @@ function join(stringOne, stringTwo) {
  * TIP: What property of the String do we need to compare?
  */
 function longest(stringOne, stringTwo) {
-    // YOUR CODE BELOW HERE //
-
-
-
-    // YOUR CODE ABOVE HERE //
+    var longestString = '';
+    return longestString;
 }
 
 /**

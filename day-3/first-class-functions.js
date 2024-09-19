@@ -12,11 +12,9 @@
  * base.
  */
 function createGreaterThanFilter(base) {
-    // YOUR CODE BELOW HERE //
-    
-   
-    
-    // YOUR CODE ABOVE HERE //
+    return function(value) {
+        return value > base;
+    }
 }
 
 /** 
@@ -26,12 +24,9 @@ function createGreaterThanFilter(base) {
  * 
  */
 function createLessThanFilter(base) {
-    // YOUR CODE BELOW HERE //
-    
-  
-    
-    
-    // YOUR CODE ABOVE HERE //
+    return function(value) {
+        return value < base;
+    }
 }
 
 /** 
@@ -42,12 +37,9 @@ function createLessThanFilter(base) {
  * This function needs to be case insensitive.
  */
 function createStartsWithFilter(startsWith) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+    return function(string) {
+        return string.startsWith(startsWith);
+    }
 }
 
 /** 
@@ -58,12 +50,9 @@ function createStartsWithFilter(startsWith) {
  * This function needs to be case insensitive.
  */
 function createEndsWithFilter(endsWith) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+    return function(string) {
+        return string.endsWith(endsWith);
+    }
 }
 
 /** 
@@ -74,12 +63,13 @@ function createEndsWithFilter(endsWith) {
  * the modify Function, but we need to collect the results into some collection.
  */
 function modifyStrings(strings, modify) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+    var modifiedStrings = [];
+    for (var i = 0; i < strings.length; i++) {
+        if (modify(strings[i]) === true) {
+            modifiedStrings.push(strings[i]);
+        }
+    }
+    return modifiedStrings;
 }
 
 
@@ -95,12 +85,12 @@ function modifyStrings(strings, modify) {
  * TIP: You need to loop over the Strings, right? And pass them to the test?
  */
 function allStringsPass(strings, test) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+    for (var i = 0; i < strings.length; i++) {
+        if (test(strings[i]) === false) {
+            return false;
+        }
+    }
+    return true;
 }
 
 

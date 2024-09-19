@@ -15,12 +15,11 @@
  * HINT: There is a method that can help with this.
  */
 function isArray(value) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+    if (Array.isArray(value)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 
@@ -37,13 +36,11 @@ function isArray(value) {
  * 
  */
 function isObject(value) {
-    // YOUR CODE BELOW HERE //
-    
-
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+    if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 
@@ -55,12 +52,13 @@ function isObject(value) {
  * TIP: Similar to isObject, but we must return true if the value is an Array.
  */
 function isCollection(value) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+    if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+        return true;
+    } else if (typeof value === 'object' && value !== null && Array.isArray(value)) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 /**
@@ -83,12 +81,23 @@ function isCollection(value) {
  *    typeOf([1,2,3]) -> "array"
  */ 
 function typeOf(value) {
-    // YOUR CODE BELOW HERE //
-    
-    
-    
-    
-    // YOUR CODE ABOVE HERE //
+    if (value.typeof === 'number') {
+        return 'number';
+    } else if (value.typeof === 'string') {
+        return 'string';
+    } else if (value.typeof === 'undefined') {
+        return 'undefined';
+    } else if (value.typeof === 'boolean') {
+        return 'boolean';
+    } else if (value.typeof === 'function') {
+        return 'function';
+    } else if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+        return 'object';
+    } else if (typeof value === 'object' && value === null && !Array.isArray(value)) {
+        return 'null';
+    } else if (typeof value === 'object' && value !== null && Array.isArray(value)) {
+        return 'array';
+    }
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

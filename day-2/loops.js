@@ -11,12 +11,9 @@
  * using console.log().
  */
 function printArrayValues(array) {
-  // YOUR CODE BELOW HERE //
-  
-  
-  
-  
-  // YOUR CODE ABOVE HERE //
+  for (var i = 0; i < array.length; i++) {
+    console.log(i);
+  }
 }
 
 /** 
@@ -24,22 +21,20 @@ function printArrayValues(array) {
  * using console.log().
  */
 function printArrayValuesInReverse(array) {
-  // YOUR CODE BELOW HERE //
-  
-  
-  
-  
-  // YOUR CODE ABOVE HERE //
+  for (var i = array.length - 1; i > -1; i--) {
+    console.log(i);
+  }
 }
 
 /** 
  * Given an input Object, return an Array containing the Object keys.
  */
 function getObjectKeys(object) {
-  // YOUR CODE BELOW HERE //
-  
-
-  // YOUR CODE ABOVE HERE //
+  var newArray = [];
+  for(var key in object) {
+    newArray.push(key);
+  }
+  return newArray;
 }
 
 /** 
@@ -47,24 +42,20 @@ function getObjectKeys(object) {
  * using console.log().
  */
 function printObjectKeys(object) {
-  // YOUR CODE BELOW HERE //
-  
-  
-  
-  
-  // YOUR CODE ABOVE HERE //
+  for (var key in object) {
+    console.log(key);
+  }
 }
 
 /** 
  * Given an input Object, return an Array containing the Object's values.
  */
 function getObjectValues(object) {
-  // YOUR CODE BELOW HERE //
-  
-  
-  
-  
-  // YOUR CODE ABOVE HERE //
+  var newArray = [];
+  for (var key in object) {
+    newArray.push(object[key]);
+  }
+  return newArray;
 }
 
 /** 
@@ -72,24 +63,16 @@ function getObjectValues(object) {
  * using console.log().
  */
 function printObjectValues(object) {
-  // YOUR CODE BELOW HERE //
-  
-  
-  
-  
-  // YOUR CODE ABOVE HERE //
+  for (var key in object) {
+    console.log(object[key]);
+  }
 }
 
 /** 
  * Given an input Object, return the number of key/value pairs stored within that Object.
  */
 function getObjectLength(object) {
-  // YOUR CODE BELOW HERE //
-  
-  
-  
-  
-  // YOUR CODE ABOVE HERE //
+  return object.keys(object).length
 }
 
 /** 
@@ -97,12 +80,10 @@ function getObjectLength(object) {
  * print its values using console.log()?
  */
 function printObjectValuesInReverse(object) {
-  // YOUR CODE BELOW HERE //
-  
-  
-  
-  
-  // YOUR CODE ABOVE HERE //
+  for (var key in object) {
+    var reversed = object.keys(object).reverse();
+  }
+  return reversed;
 }
 
 
